@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QPlan - Data Visualization Tool</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">QPlan - Interactive Data Visualization Tool</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="dataForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="csvFile">Upload CSV File:</label>
+                        <input type="file" class="form-control-file" id="csvFile" accept=".csv">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <textarea id="manualInput" class="form-control" rows="5" placeholder="Or paste your data here"></textarea>
+                <button id="visualizeButton" class="btn btn-success mt-3">Visualize Data</button>
+            </div>
+        </div>
+        <div id="chartsContainer" class="mt-5"></div>
+        <div class="mt-3">
+            <button id="exportPNGButton" class="btn btn-info">Export as PNG</button>
+            <button id="sortButton" class="btn btn-secondary ml-2">Sort by Value</button>
+            <input type="color" id="colorPicker" class="ml-2">
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
